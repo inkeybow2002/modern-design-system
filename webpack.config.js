@@ -16,6 +16,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-react'],
+            sourceMaps: true
           },
         },
       },
@@ -25,6 +26,7 @@ module.exports = {
       },
     ],
   },
+  devtool: 'source-map',
   devServer: {
     static: path.join(__dirname, 'dist'),
     compress: true,
