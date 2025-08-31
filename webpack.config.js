@@ -5,29 +5,29 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: process.env.PUBLIC_URL || '/assets/'
+    publicPath: process.env.PUBLIC_URL || '/assets/',
   },
   module: {
     rules: [
       {
-        test: /\.js$/,  
+        test: /\.js$/,
         exclude: /node_modules/,  
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react']
-          }
-        }
+            presets: ['@babel/preset-react'],
+          },
+        },
       },
       {
-        test: /\.css$/,  
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-      }
-    ]
+      },
+    ],
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000
-  }
+    port: 9000,
+  },
 };
