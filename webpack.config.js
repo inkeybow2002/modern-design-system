@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/assets/' 
+    publicPath: process.env.PUBLIC_URL || '/assets/' 
   },
   module: {
     rules: [
