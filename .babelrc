@@ -3,5 +3,5 @@
     "@babel/preset-env",
     "@babel/preset-react"
   ],
-  "comments": "Configuration for Babel presets"
+  "comments": true
 }
